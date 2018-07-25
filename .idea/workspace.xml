@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2042a7a9-cc2e-4122-bd3f-f173323c7038" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/kaggle/VGG_16.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaggle/dataInput.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaggle/dog_cat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaggle/dog_or_cat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaggle/model_train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minst_conv2d.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minst_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_word2vector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text8.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/word2vector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaggle/VGG_16.py" beforeDir="false" afterPath="$PROJECT_DIR$/kaggle/VGG_16.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaggle/dataInput.py" beforeDir="false" afterPath="$PROJECT_DIR$/kaggle/dataInput.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaggle/model_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/kaggle/model_train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VGG_16.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VGG_16.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kaggle/VGG_16.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-755">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="723">
+              <caret line="128" column="33" lean-forward="true" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
               <folding>
                 <element signature="e#93#111#0" expanded="true" />
               </folding>
@@ -44,26 +37,44 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="variable_scope.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="1047" column="4" selection-start-line="1047" selection-start-column="4" selection-end-line="1047" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="model_train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kaggle/model_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="578">
+              <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
               <folding>
-                <element signature="e#97#115#0" expanded="true" />
+                <element signature="e#97#120#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="word2vector.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/word2vector.py">
+      <file leaf-file-name="dog_or_cat.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kaggle/dog_or_cat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-697">
-              <caret line="209" column="25" selection-start-line="209" selection-start-column="25" selection-end-line="209" selection-end-column="25" />
+            <state relative-caret-position="366">
+              <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
               <folding>
-                <element signature="e#326#344#0" expanded="true" />
+                <element signature="e#123#146#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dog_cat.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kaggle/dog_cat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -71,22 +82,10 @@
       <file leaf-file-name="dataInput.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kaggle/dataInput.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="1071">
+              <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
               <folding>
                 <element signature="e#95#118#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dog_or_cat.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kaggle/dog_or_cat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-              <folding>
-                <element signature="e#123#146#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,10 +120,10 @@
         <option value="$PROJECT_DIR$/word2vector.py" />
         <option value="$PROJECT_DIR$/kaggle/dog_cat.py" />
         <option value="$PROJECT_DIR$/minst_conv2d.py" />
-        <option value="$PROJECT_DIR$/kaggle/VGG_16.py" />
+        <option value="$PROJECT_DIR$/kaggle/dog_or_cat.py" />
         <option value="$PROJECT_DIR$/kaggle/model_train.py" />
         <option value="$PROJECT_DIR$/kaggle/dataInput.py" />
-        <option value="$PROJECT_DIR$/kaggle/dog_or_cat.py" />
+        <option value="$PROJECT_DIR$/kaggle/VGG_16.py" />
       </list>
     </option>
   </component>
@@ -138,10 +137,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="142" />
+    <option name="x" value="307" />
     <option name="y" value="-4" />
     <option name="width" value="1428" />
-    <option name="height" value="756" />
+    <option name="height" value="478" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -321,6 +320,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1615" height="1054" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -329,7 +329,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.285" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.59827214" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14049587" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17355372" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3288889" />
@@ -366,7 +366,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kaggle/dataInput.py</url>
-          <line>43</line>
+          <line>57</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -445,13 +445,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1247972723/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31586">
-          <caret line="1858" column="8" selection-start-line="1858" selection-start-column="8" selection-end-line="1858" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/nn_impl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17578">
@@ -746,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaggle/dog_cat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/-1247972723/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -822,42 +808,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaggle/model_train.py">
+    <entry file="file://$PROJECT_DIR$/kaggle/dog_cat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#97#115#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kaggle/dataInput.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="1071">
+          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
           <folding>
             <element signature="e#95#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaggle/VGG_16.py">
+    <entry file="file://$PROJECT_DIR$/kaggle/dog_or_cat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-755">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="366">
+          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
           <folding>
-            <element signature="e#93#111#0" expanded="true" />
+            <element signature="e#123#146#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kaggle/dog_or_cat.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        <state relative-caret-position="300">
+          <caret line="1047" column="4" selection-start-line="1047" selection-start-column="4" selection-end-line="1047" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaggle/model_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
           <folding>
-            <element signature="e#123#146#0" expanded="true" />
+            <element signature="e#97#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaggle/VGG_16.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="128" column="33" lean-forward="true" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
+          <folding>
+            <element signature="e#93#111#0" expanded="true" />
           </folding>
         </state>
       </provider>

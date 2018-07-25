@@ -10,6 +10,7 @@ import tensorflow as tf
 class vgg16():
     """
     模型结构定义： 使用了卷积，池化，全连接 还定义了权重是否进行训练
+    其中fc, conv, maxpool用来定义网络的层，其中包含了权重等数据
     """
     def __init__(self, images):
         self.parameters = []
@@ -22,23 +23,51 @@ class vgg16():
         return tf.train.Saver()
 
     def maxpool(self, name, input_data, trainable):
+        """
+        maxpool中不存在权重等数据，不需要进行训练
+        :param name:
+        :param input_data:
+        :param trainable:
+        :return:
+        """
         out = tf.nn.max_pool(input_data, [1, 2, 2, 1], [1, 2, 2, 1], padding="SAME", name=name)
+        # 上述参数　[1, 2, 2, 1]表示了ksize　分别表示了在batch_size, height, width, channel中池化
+        # 第二个 [1, 2, 2, 1] 表示了stride　分别表示了各个维度上的步长
         return out
 
     # 对于卷积层，需要知道输入的input_data，
     def conv(self, name, input_data, out_channel, trainable):
+        """
+        卷积层
+        :param name:
+        :param input_data:
+        :param out_channel: 输出的维度
+        :param trainable:
+        :return:
+        """
         in_channel = input_data.get_shape()[-1]
         with tf.variable_scope(name):
             kernel = tf.get_variable("weights", [3, 3, in_channel, out_channel], dtype=tf.float32, trainable= False)
             biases = tf.get_variable("biases", [out_channel], dtype=tf.float32, trainable=False)
+            # f.nn.conv2d(input, filter, strides, padding, use_cudnn_on_gpu=None, name=None)  strides [batch, width, height, channel]
             conv_res = tf.nn.conv2d(input_data, kernel, [1, 1, 1, 1], padding="SAME")
             res = tf.nn.bias_add(conv_res, biases)
+            # 在卷积层后面直接接relu
             out = tf.nn.relu(res, name=name)
         self.parameters += [kernel, biases]
         return out
 
     def fc(self, name, input_data, out_channel, trainable=True):
+        """
+        全连接层
+        :param name:
+        :param input_data:
+        :param out_channel: 需要知道目标维度是多少
+        :param trainable:
+        :return:
+        """
         shape = input_data.get_shape().as_list()
+        # 这个写法貌似是不正确的吧，最前面的一个维度留给了batch_size，后面的维度的变量全部用来进行全连接操作
         if len(shape) == 4:
             size = shape[-1] * shape[-2] * shape[-3]
         else:
@@ -84,6 +113,10 @@ class vgg16():
         self.pool5 = self.maxpool("poorwel5", self.conv5_3, trainable=False)
 
     def fc_layers(self):
+        """
+        两次全连接到4096 后再全连接到1000,　最后经过softmax
+        :return:
+        """
         self.fc6 = self.fc("fc6", self.pool5, 4096, trainable=False)
         self.fc7 = self.fc("fc7", self.fc6, 4096, trainable=False)
         # 前面的层是使用训练好了的权重，最后的fc则是最新的需要训练的权重
@@ -94,5 +127,6 @@ class vgg16():
         keys = sorted(weights.keys())
         for i, k in enumerate(keys):
             if i not in [30, 31]:
+                # 这里使用的assign代表了给权重进行赋值，就是前面的get_variable
                 sess.run(self.parameters[i].assign(weights[k]))
         print("-----------all done---------------")
