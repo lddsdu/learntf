@@ -4,6 +4,7 @@ import numpy as np
 import os
 import tensorflow as tf
 
+
 def read_train_image(filename):
     index = 0
     binfile = open(filename, "rb")
@@ -15,7 +16,7 @@ def read_train_image(filename):
         im = struct.unpack_from(">784B", buf, index)
         index += struct.calcsize('>784B')
         im = np.array(im)
-        im = im / 255
+        im = im / 255.0
         im = im.reshape(1, 28 * 28)
         train_image_list[i, :] = im
     return train_image_list
@@ -68,17 +69,24 @@ test_label_list = read_test_label(test_label_filename)
 # 训练样本image placeholder 是 n * 784
 x = tf.placeholder("float", [None, 784])
 # 权重
-W = tf.Variable(tf.zeros([784, 10]))
+W = tf.Variable(tf.truncated_normal([784, 300], stddev=0.1))
 # bias
-b = tf.Variable(tf.zeros([10]))
+b = tf.Variable(tf.zeros([300]))
+
+hidden = tf.nn.sigmoid(tf.matmul(x, W) + b)
+
+W1 = tf.Variable(tf.zeros([300, 10]))
+
+b1 = tf.Variable(tf.zeros([10]))
+
 # 训练结果
-y = tf.nn.softmax(tf.matmul(x,W) + b)
-# 交叉熵
-y_ = tf.placeholder("float", [None, 10])
+y = tf.nn.softmax(tf.matmul(hidden, W1) + b1)
+# 交叉熵，label中设置的值
+y_ = tf.placeholder(tf.float32, [None, 10])
 # 设置的损失函数？？？
-cross_entropy = -tf.reduce_sum(y_ * tf.log(y))
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(y_ * tf.log(y), reduction_indices=[1]))
 # 梯度下降法,最小化交叉熵
-train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
+train_step = tf.train.GradientDescentOptimizer(0.1).minimize(cross_entropy)
 
 init = tf.global_variables_initializer()
 sess = tf.Session()
@@ -87,14 +95,11 @@ sess.run(init)
 
 
 #进行训练
-for i in range(3000):
-    batch_xs, batch_ys = next_batch_image(128,train_image_list, train_label_list)
-    sess.run(train_step, feed_dict={x:batch_xs, y_:batch_ys})
+for i in range(30000):
+    batch_xs, batch_ys = next_batch_image(64, train_image_list, train_label_list)
+    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
     if i % 100 == 0:
         # 用来测试识别准确率
         correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
         accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
         print (sess.run(accuracy, feed_dict={x: test_image_list, y_: test_label_list}))
-
-
-
