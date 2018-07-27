@@ -103,13 +103,13 @@ for g, v in grads_and_vars:
         sparsity_summary = tf.summary.scalar("{}/grad/sparisty".format(v.name), tf.nn.zero_fraction(g))
         grad_summaries.append(grad_hist_summary)
         grad_summaries.append(sparsity_summary)
-grad_summaries_merged = tf.summary.merge(grad_summaries)
 
+grad_summaries_merged = tf.summary.merge(grad_summaries)
 # summary for loss and pearson
 loss_summary = tf.summary.scalar("loss", textcnn.loss)
 acc_summary = tf.summary.scalar("pearson", textcnn.pearson)
 
-# train summary
+# train summary  operations 并不会去执行计算，除非主动的run， 或者是被其他的operation所依赖
 train_summary_op = tf.summary.merge([loss_summary, acc_summary, grad_summaries_merged])
 out_dir = "/home/jack/Desktop"    #
 train_summary_dir = os.path.join(out_dir, "summaries", "train")
@@ -163,10 +163,10 @@ def train_step(s1, s2, score):
     :return:
     """
     feed_dict = {
-        textcnn.s1 : s1,
-        textcnn.s2 : s2,
-        textcnn.scores : score,
-        textcnn.drop_keep_prob : FLAGS.dropout_keep_prob
+        textcnn.s1: s1,
+        textcnn.s2: s2,
+        textcnn.scores: score,
+        textcnn.drop_keep_prob: FLAGS.dropout_keep_prob
     }
 
     # 哪些数据是要进行计算的？？？ loss accuracy summary global_step train_op
@@ -197,14 +197,15 @@ def dev_step(s1, s2, score, writer=None):
     if writer:
         writer.add_summary(summaries, step)
 
+
+# 通过这个实例来托管所有的训练数据，然后通过next_batch来返回一个batch
 STS_train = dataset(s1=s1_train, s2=s2_train, label=score_train)
 
 for i in range(40000):
     batch_train = STS_train.next_batch(FLAGS.batch_size)
     train_step(batch_train[0], batch_train[1], batch_train[2])
-    # 用于获取当前的step么， 前面不是有了i么
+    # 用于获取当前的step么， 前面不是有了i么,这里应该也会让global_step的数据增加1吧
     current_step = tf.train.global_step(sess, global_step)
-
     # 吐槽一下这里的变量的命名的方式，xxx_every，这个也太乡土了吧。。。 interval
     if current_step % FLAGS.evaluate_every == 0:
         print("\nEvaluation:")

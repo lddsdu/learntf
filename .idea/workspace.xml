@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2042a7a9-cc2e-4122-bd3f-f173323c7038" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/base/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cnn_sim/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cnn_sim/data_util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cnn_sim/model_train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cnn_sim/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cnn_sim/textcnn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cnn_sim/variable_consant.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dssm/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dssm/dssn_net.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dssm/model_train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dssm_v2/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dssm_v2/dssm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaggle/model_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/kaggle/model_train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minst_conv2d.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/minst_conv2d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minst_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/minst_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mnist.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/mnist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_word2vector.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/test_word2vector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text8.zip" beforeDir="false" afterPath="$PROJECT_DIR$/base/text8.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsne.png" beforeDir="false" afterPath="$PROJECT_DIR$/base/tsne.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word2vector.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/word2vector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/minst_conv2d.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/minst_conv2d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cnn_sim/model_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/cnn_sim/model_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cnn_sim/textcnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/cnn_sim/textcnn.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,6 +20,7 @@
     <SUITE FILE_PATH="coverage/learntf$minst_test.coverage" NAME="minst_test Coverage Results" MODIFIED="1532414913874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/learntf$mnist.coverage" NAME="mnist Coverage Results" MODIFIED="1532428259157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/learntf$word2vector.coverage" NAME="word2vector Coverage Results" MODIFIED="1532485694374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/learntf$minst_conv2d__1_.coverage" NAME="minst_conv2d (1) Coverage Results" MODIFIED="1532697566838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/base" />
     <SUITE FILE_PATH="coverage/learntf$dog_or_cat.coverage" NAME="dog_or_cat Coverage Results" MODIFIED="1532523708916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kaggle" />
   </component>
   <component name="DatabaseView">
@@ -55,11 +39,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="model_train.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="model_train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cnn_sim/model_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
+            <state relative-caret-position="834">
+              <caret line="168" column="30" selection-start-line="168" selection-start-column="30" selection-end-line="168" selection-end-column="30" />
+              <folding>
+                <element signature="e#136#151#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,8 +54,8 @@
       <file leaf-file-name="textcnn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cnn_sim/textcnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+            <state relative-caret-position="579">
+              <caret line="177" column="38" lean-forward="true" selection-start-line="177" selection-start-column="38" selection-end-line="177" selection-end-column="38" />
               <folding>
                 <element signature="e#96#119#0" expanded="true" />
               </folding>
@@ -76,23 +63,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_util.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data_util.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cnn_sim/data_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="159" column="38" selection-start-line="159" selection-start-column="38" selection-end-line="159" selection-end-column="38" />
+            <state relative-caret-position="-748">
+              <caret line="92" column="13" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
               <folding>
                 <element signature="e#95#125#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VGG_16.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kaggle/VGG_16.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="71" column="52" selection-start-line="71" selection-start-column="52" selection-end-line="71" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -112,6 +90,8 @@
       <find>nce</find>
       <find>dictiona</find>
       <find>placeholder</find>
+      <find>loca</find>
+      <find>merge</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,9 +117,10 @@
         <option value="$PROJECT_DIR$/cnn_sim/readme.txt" />
         <option value="$PROJECT_DIR$/cnn_sim/variable_consant.py" />
         <option value="$PROJECT_DIR$/cnn_sim/cnn_model.py" />
-        <option value="$PROJECT_DIR$/cnn_sim/textcnn.py" />
         <option value="$PROJECT_DIR$/cnn_sim/data_util.py" />
+        <option value="$PROJECT_DIR$/base/minst_conv2d.py" />
         <option value="$PROJECT_DIR$/cnn_sim/model_train.py" />
+        <option value="$PROJECT_DIR$/cnn_sim/textcnn.py" />
       </list>
     </option>
   </component>
@@ -152,11 +133,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="774" />
-    <option name="y" value="24" />
-    <option name="width" value="1146" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="182" />
+    <option name="y" value="-4" />
+    <option name="width" value="1404" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -177,11 +158,6 @@
               <item name="learntf" type="b2602c69:ProjectViewProjectNode" />
               <item name="learntf" type="462c0819:PsiDirectoryNode" />
               <item name="cnn_sim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learntf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learntf" type="462c0819:PsiDirectoryNode" />
-              <item name="kaggle" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -217,7 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.dog_or_cat">
+  <component name="RunManager" selected="Python.minst_conv2d (1)">
     <configuration name="dog_or_cat" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learntf" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -237,6 +213,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="minst_conv2d (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="learntf" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/base" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/base/minst_conv2d.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="minst_conv2d" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="learntf" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -251,25 +246,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/minst_conv2d.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="mnist" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="learntf" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mnist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -314,19 +290,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.mnist" />
       <item itemvalue="Python.minst_conv2d" />
       <item itemvalue="Python.word2vector" />
       <item itemvalue="Python.model_train" />
       <item itemvalue="Python.dog_or_cat" />
+      <item itemvalue="Python.minst_conv2d (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.minst_conv2d (1)" />
         <item itemvalue="Python.dog_or_cat" />
         <item itemvalue="Python.model_train" />
         <item itemvalue="Python.word2vector" />
         <item itemvalue="Python.minst_conv2d" />
-        <item itemvalue="Python.mnist" />
       </list>
     </recent_temporary>
   </component>
@@ -344,7 +320,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="774" y="24" width="1146" height="1056" extended-state="4" />
+    <frame x="57" y="-4" width="1863" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -352,15 +328,16 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.285" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.59827214" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19812304" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988864" weight="0.41123188" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988864" visible="true" weight="0.23228996" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32984003" />
       <window_info anchor="right" id="SciView" order="3" weight="0.77113795" />
       <window_info id="Structure" order="1" sideWeight="0.5011136" side_tool="true" weight="0.41156068" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" weight="0.32976446" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5010799" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47858673" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -370,26 +347,26 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850778" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.59827214" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988864" visible="true" weight="0.41156068" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988864" visible="true" weight="0.32929516" />
       <window_info id="Structure" order="1" sideWeight="0.5011136" side_tool="true" weight="0.41156068" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32850778" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5010799" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32984003" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="4" weight="0.77113795" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5010799" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.77113795" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850778" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.285" />
     </layout-to-restore>
   </component>
@@ -427,6 +404,11 @@
           <line>48</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/base/minst_conv2d.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -435,7 +417,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="35" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -493,23 +475,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/base/mnist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22440">
-          <caret line="1339" selection-start-line="1339" selection-end-line="1339" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44200">
@@ -620,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1337" selection-start-line="1337" selection-end-line="1337" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/gen_array_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35428">
@@ -734,13 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/minst_conv2d.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="127" column="31" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/minst_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -784,6 +735,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="214" selection-start-line="214" selection-end-line="215" />
+          <folding>
+            <element signature="e#326#344#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -798,13 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="39" selection-end-column="135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cnn_sim/variable_consant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -850,20 +797,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cnn_sim/data_util.py">
+    <entry file="file://$PROJECT_DIR$/cnn_sim/variable_consant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="159" column="38" selection-start-line="159" selection-start-column="38" selection-end-line="159" selection-end-column="38" />
+        <state relative-caret-position="85">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/summary/summary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/minst_conv2d.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="174" column="42" lean-forward="true" selection-start-line="174" selection-start-column="41" selection-end-line="174" selection-end-column="42" />
           <folding>
-            <element signature="e#95#125#0" expanded="true" />
+            <element signature="e#98#111#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/summary/writer/writer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/math_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="1376" column="2" selection-start-line="1342" selection-start-column="5" selection-end-line="1376" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cnn_sim/textcnn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
+        <state relative-caret-position="579">
+          <caret line="177" column="38" lean-forward="true" selection-start-line="177" selection-start-column="38" selection-end-line="177" selection-end-column="38" />
           <folding>
             <element signature="e#96#119#0" expanded="true" />
           </folding>
@@ -872,8 +847,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cnn_sim/model_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
+        <state relative-caret-position="834">
+          <caret line="168" column="30" selection-start-line="168" selection-start-column="30" selection-end-line="168" selection-end-column="30" />
+          <folding>
+            <element signature="e#136#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cnn_sim/data_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-748">
+          <caret line="92" column="13" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+          <folding>
+            <element signature="e#95#125#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

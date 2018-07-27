@@ -124,30 +124,51 @@ W_fc2 = weight_variable([1024, 10])
 b_fc2 = bias_variable([10])
 y_predict = tf.nn.softmax(tf.matmul(h_fc1_drop, W_fc2) + b_fc2)   #softmax层
 
-# 设置的损失函数？？？
-cross_entropy = -tf.reduce_sum(y_ * tf.log(y_predict), reduction_indices=[1])
-# 梯度下降法,最小化交叉熵
-train_step = tf.train.GradientDescentOptimizer(0.001).minimize(cross_entropy)
+# 设置的损失函数？？？  这里一定要使用reduce_mean
+cross_entropy = -tf.reduce_mean(y_ * tf.log(y_predict))
+
+# 简单的记录一下损失函数吧
+with tf.name_scope("stddev"):
+    a=tf.summary.scalar("cross_entropy", tf.reduce_mean(cross_entropy))
+
+# 用来测试识别准确率
+correct_prediction = tf.equal(tf.argmax(y_predict, 1), tf.argmax(y_, 1))
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+
+with tf.name_scope("train"):
+    b=tf.summary.scalar("accuracy", tf.reduce_mean(accuracy))
+
+# merged = tf.summary.merge_all()
+train_writer = tf.summary.FileWriter("/home/jack/Desktop/test")
+
+# 梯度下降法,最小化交叉熵  学习率设置过大的话容易造成nan的情况
+train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
+# 设置显存可以动态的增长
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
 
 init = tf.global_variables_initializer()
-sess = tf.Session()
+sess = tf.Session(config=config)
 # 变量的初始化
 sess.run(init)
 
 
 #进行训练
 for i in range(30000):
-    batch_xs, batch_ys = next_batch_image(20, train_image_list, train_label_list)
-    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys, keep_prob: 1.0})
-    if i % 1000 == 0:
-        # 用来测试识别准确率
-        correct_prediction = tf.equal(tf.argmax(y_predict, 1), tf.argmax(y_, 1))
-        accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+    batch_xs, batch_ys = next_batch_image(200, train_image_list, train_label_list)
+    _, l = sess.run([train_step, cross_entropy], feed_dict={x: batch_xs, y_: batch_ys, keep_prob: 1.0})
+    # print("loss ", i, " ", l)
+    if i % 100 == 0:
+        loss_value = sess.run(a, feed_dict={x: batch_xs, y_: batch_ys, keep_prob: 1.0})
+        loss_value2 = sess.run(b, feed_dict={x: batch_xs, y_: batch_ys, keep_prob: 1.0})
+
         accuracy_sum = 0
         for i in range(500):
             index = i * 20
             accuracy_sum += sess.run(accuracy, feed_dict={x: test_image_list[index: index+20], y_: test_label_list[index:index + 20], keep_prob: 1.0})
         print (accuracy_sum / 500)
+        train_writer.add_summary(summary=loss_value, global_step=i)
+        train_writer.add_summary(summary=loss_value2, global_step=i)
 
 saver = tf.train.Saver()
 #注意这里save_path包含了最终生成的三个文件的前缀部分

@@ -8,6 +8,7 @@ import tensorflow as tf
 import numpy as np
 from data_util import build_glove_dict
 
+
 class TextCnn(object):
     """
     定义网络结构 网络的结构是什么样的？？？
@@ -66,7 +67,7 @@ class TextCnn(object):
     # maxpool 池化层
     def maxpool(self, name, input_data):
         """
-        最大池化  没有参数，相对比较简单
+        最大池化  没有学习的参数，相对比较简单
         :param name:
         :param input_data:
         :return:
@@ -165,8 +166,9 @@ class TextCnn(object):
 
     def add_loss(self):
         with tf.name_scope("loss"):
-            losses = tf.nn.softmax_cross_entropy_with_logits(logits=self.scores, labels=self.input_y)
-            self.loss = tf.reduce_mean(losses) + self.l2_reg_lambda * self.l2_loss
+            # 这里直接使用了平方损失函数
+            losses = tf.square(self.scores - self.input_y)
+            self.loss = tf.reduce_mean(losses) + self.l2_reg_lambda * self.l2_loss #这里加上了惩罚项,no过拟合
 
     def add_acuracy(self):
         with tf.name_scope("pearson"):
