@@ -17,6 +17,7 @@ image_batch, label_batch = reader.get_batch(X_train, Y_train, 224, 224, 25, 256)
 x_images_placeholder = tf.placeholder(tf.float32, [None, 224, 224, 3])          # 代表了输入的维度，但是没有将batch大小明确的写出来，使用None来表示
 y_images_placeholder = tf.placeholder(tf.float32, [None, 2])                    # 这里就代表了二分类
 vgg = model(x_images_placeholder)
+# 将vgg model中的数据拿出来，用来sess.run()中计算
 fc3_cat_and_dog = vgg.probs
 loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=fc3_cat_and_dog, labels=y_images_placeholder))
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.001).minimize(loss)

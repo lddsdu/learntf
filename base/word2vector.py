@@ -210,7 +210,7 @@ with graph.as_default():
     with tf.device("/cpu:0"):
         # 单词大小为50000，向量维度为128，随机采样在（-1，1）之间的浮点数
         embeddings = tf.Variable(tf.random_uniform([vocabulary_size,embedding_size], -1.0, 1.0))
-        # 使用tf.nn.embedding_lookup()函数查找train_inputs对应的向量embed
+        # 使用tf.nn.embedding_lookup()函数查找train_inputs对应的向量embed  意思是直接拿取一部分数据
         embed = tf.nn.embedding_lookup(embeddings, train_inputs)
 
         # 优化目标选择NCE loss
@@ -251,11 +251,11 @@ with tf.Session(graph=graph) as session:
     for step in range(num_steps):
         batch_inputs,batch_labels = generate_batch(batch_size,num_skips,skip_window) #调用生成训练数据函数生成一组batch和label
         feed_dict = {train_inputs:batch_inputs,train_labels:batch_labels} #待填充的数据
-        #启动回话，运行优化器optimizer和损失计算函数，并填充数据
+        # 启动回话，运行优化器optimizer和损失计算函数，并填充数据
         optimizer_trained,loss_val = session.run([optimizer,loss],feed_dict=feed_dict)
         average_loss += loss_val #统计NCE损失
 
-        #为了方便，每2000次计算一下损失并显示出来
+        # 为了方便，每2000次计算一下损失并显示出来
         if step % 2000 == 0:
             if step > 0:
                 average_loss /= 2000
